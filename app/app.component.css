@@ -32,8 +32,21 @@ input {
 }
 .label clr-icon {
   cursor: pointer;
+  flex-shrink: 0;
+  display: block;
 }
-
+.label {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+.label .label-content {
+  flex-shrink: 1;
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: default;
+}
 .label clr-icon:hover {
   color: darkgray;
   transition: 100ms;
