@@ -26,6 +26,7 @@ input {
   max-height: 10rem;
   overflow-y: auto;
   max-width: 100%;
+  min-width: 100%;
 }
 
 .dropdown-item {
