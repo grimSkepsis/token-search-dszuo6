@@ -4,6 +4,7 @@
 
 .token-search-wrapper {
   display: flex;
+  flex-wrap: wrap;
   border-bottom: 1px solid black;
   align-items: center;
 }
@@ -15,6 +16,9 @@ input {
   border: none;
   flex-grow: 1;
   outline: none; 
+  flex-shrink: 1;
+  flex-basis: 3rem;
+  min-width: 0;
 }
 .dropdown {
   top: -17px;

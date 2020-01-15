@@ -14,12 +14,19 @@ import { Subject, Observable } from "rxjs/Rx";
 })
 export class AppComponent {
   public options: string[] = this._getOptions(50);
-
+  public selectedOptions: string[] = [];
   private _getOptions(numOptions: number): string[] {
     let returnArray: string[] = [];
     for (let x: number = 0; x < numOptions; x++) {
       returnArray.push("Option" + x);
     }
     return returnArray;
+  }
+  public select(selectedVal: string): void {
+    this.selectedOptions.push(selectedVal);
+  }
+
+  public get availableOptions(): string[] {
+    return this.options.filter((option: string) => this.selectedOptions.indexOf(option) === -1);
   }
 }

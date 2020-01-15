@@ -1,11 +1,11 @@
 <div class="display">
   <div class="token-search-wrapper">
-    <span class="label">Seattle</span>
+    <span class="label" *ngFor="let option of selectedOptions">{{option}}</span>
       <input  placeholder="My input" />
   </div>
   <div class="dropdown open">
     <div class="dropdown-menu">
-        <div class="dropdown-item" *ngFor="let option of options">{{option}}</div>
+        <div class="dropdown-item" *ngFor="let option of availableOptions" (click)="select(option)">{{option}}</div>
     </div>
 </div>
 </div>
