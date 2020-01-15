@@ -1,13 +1,13 @@
-<div class="display">
-  <div class="token-search-wrapper">
-    <span class="label" *ngFor="let option of selectedOptions">{{option}}<clr-icon shape="times"
-    (click)="deselect(option)"></clr-icon></span>
-      <input #searchInput 
-      (keyup)="updateSearchTerm(searchInput.value)"/>
-  </div>
-  <div class="dropdown open" *ngIf="showSearchMenu">
-    <div class="dropdown-menu">
-        <div class="dropdown-item" *ngFor="let option of availableOptions" (click)="select(option)">{{option}}</div>
-    </div>
+<div class="display">
+  <div class="token-search-wrapper">
+    <span class="label" *ngFor="let option of selectedOptions">{{option}}<clr-icon shape="times"
+    (click)="deselect(option)"></clr-icon></span>
+      <input #searchInput 
+      (keyup)="updateSearchTerm(searchInput.value)"/>
+  </div>
+  <div class="dropdown open" *ngIf="showSearchMenu">
+    <div class="dropdown-menu">
+        <div class="dropdown-item" *ngFor="let option of availableOptions" (click)="select(option)">{{option}}</div>
+    </div>
 </div>
 </div>
