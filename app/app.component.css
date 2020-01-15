@@ -1,0 +1,33 @@
+ .nav-link:before,
+ ::ng-deep .nav-group-content:before {
+  content : "";
+  position: absolute;
+  bottom  : 0;
+  top : 0;
+  height  : 100%;
+  width   : 2px;  /* or 100px */
+  background: #575757;
+  left: 1.29rem;
+}
+
+.nav-link,
+ ::ng-deep .nav-group-content {
+  position: relative;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.nav-link.is-selected {
+  background: lightgray;
+}
+
+::ng-deep clr-vertical-nav-group.is-selected .nav-link:before, 
+::ng-deep clr-vertical-nav-group.is-selected .nav-group-content:before {
+  background: lightgreen;
+}
+
+::ng-deep clr-vertical-nav-group.is-selected .nav-icon {
+  color: lightgreen;
+}
