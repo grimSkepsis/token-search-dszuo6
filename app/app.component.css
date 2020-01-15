@@ -1,33 +1,21 @@
- .nav-link:before,
- ::ng-deep .nav-group-content:before {
-  content : "";
-  position: absolute;
-  bottom  : 0;
-  top : 0;
-  height  : 100%;
-  width   : 2px;  /* or 100px */
-  background: #575757;
-  left: 1.29rem;
+.display {
+  padding: 1rem;
 }
 
-.nav-link,
- ::ng-deep .nav-group-content {
-  position: relative;
+.token-search-wrapper {
+  display: flex;
+  border-bottom: 1px solid black;
+  align-items: center;
 }
-
-.nav-link {
-  cursor: pointer;
+:host::ng-deep clr-input-container {
+  margin-top: 0;
 }
-
-.nav-link.is-selected {
-  background: lightgray;
+input {
+  margin: 0;
+  border: none;
+  flex-grow: 1;
+  outline: none; 
 }
-
-::ng-deep clr-vertical-nav-group.is-selected .nav-link:before, 
-::ng-deep clr-vertical-nav-group.is-selected .nav-group-content:before {
-  background: lightgreen;
-}
-
-::ng-deep clr-vertical-nav-group.is-selected .nav-icon {
-  color: lightgreen;
+.dropdown {
+  top: -17px;
 }
