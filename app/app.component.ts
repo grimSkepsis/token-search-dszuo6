@@ -13,71 +13,13 @@ import { Subject, Observable } from "rxjs/Rx";
   templateUrl: "app.component.html"
 })
 export class AppComponent {
-  public lineageItems = [
-    {
-      title: "item1",
-      isSelected: true,
-      children: [
-        {
-          title: "child 1",
-          isSelected: true,
-        },
-        {
-          title: "child 2",
-          isSelected: false,
-        }
-      ]
-    },
-    {
-      title: "item2",
-      isSelected: false,
-      children: [
-        {
-          title: "child 1",
-          isSelected: false,
-        },
-        {
-          title: "child 2",
-          isSelected: false,
-        }
-      ]
-    },
-    {
-      title: "item3",
-      isSelected: false,
-      children: [
-        {
-          title: "child 1",
-          isSelected: false,
-        },
-        {
-          title: "child 2",
-          isSelected: false
-        }
-      ]
+  public options: string[] = this._getOptions(50);
+
+  private _getOptions(numOptions: number): string[] {
+    let returnArray: string[] = [];
+    for (let x: number = 0; x < numOptions; x++) {
+      returnArray.push("Option" + x);
     }
-  ];
-
-  selectChild(selectedItem: LineageParentItem, childName: string): void {
-    this.lineageItems.map( item => {
-      item.isSelected = false;
-      item.children.map(child => {
-        child.isSelected = false;
-      });
-      return item;
-    })
-    selectedItem.isSelected = true;
-    selectedItem.children.find(child => child.title === childName).isSelected = true;
+    return returnArray;
   }
-}
-
-interface LineageParentItem {
-  title: string;
-  children: LineageChildItem[];
-  isSelected: boolean;
-}
-
-interface LineageChildItem {
-  title: string;
-  isSelected: boolean;
 }

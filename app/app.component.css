@@ -19,3 +19,11 @@ input {
 .dropdown {
   top: -17px;
 }
+.dropdown-menu {
+  max-height: 10rem;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  min-height: 1.5rem;
+}
