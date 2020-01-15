@@ -3,10 +3,15 @@
     <span class="label" *ngFor="let option of selectedOptions">{{option}}<clr-icon shape="times"
     (click)="deselect(option)"></clr-icon></span>
       <input #searchInput 
-      (keyup)="updateSearchTerm(searchInput.value)"/>
+      (keyup)="updateSearchTerm(searchInput.value)"
+      placeholder="Search..."/>
   </div>
   <div class="dropdown open" *ngIf="showSearchMenu">
     <div class="dropdown-menu">
+      <p *ngIf="hasNoOptionsToDisplay"
+      class="dropdown-header">
+        No options match search term
+      </p>
         <div class="dropdown-item" *ngFor="let option of availableOptions" (click)="select(option)">{{option}}</div>
     </div>
 </div>

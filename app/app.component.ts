@@ -46,4 +46,8 @@ export class AppComponent {
   public get availableOptions(): string[] {
     return this.options.filter((option: string) => this.selectedOptions.indexOf(option) === -1).filter((option: string) => option.includes(this.searchTerm));
   }
+
+  public get hasNoOptionsToDisplay(): boolean {
+    return this.availableOptions.length === 0;
+  }
 }
