@@ -20,10 +20,7 @@ export class AppComponent {
   private _getOptions(numOptions: number): string[] {
     let returnArray: string[] = [];
     for (let x: number = 0; x < numOptions; x++) {
-      returnArray.push(`super duuuuuuuuuuper duuuuuuuuuuper
-      duuuuuuuuuuper
-      duuuuuuuuuuper
-      long Option` + x);
+      returnArray.push(`Option` + x);
     }
     return returnArray;
   }

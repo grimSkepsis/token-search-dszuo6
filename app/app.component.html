@@ -14,7 +14,7 @@
       class="dropdown-header">
         No options match search term
       </p>
-        <div class="dropdown-item" *ngFor="let option of availableOptions" (click)="select(option)">{{option}}</div>
+        <div class="dropdown-item" *ngFor="let option of availableOptions" (click)="select(option)" [title]="option">{{option}}</div>
     </div>
 </div>
 </div>
