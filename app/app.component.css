@@ -18,11 +18,13 @@ input {
   min-width: 0;
 }
 .dropdown {
-  top: -17px;
+  top: -1px;
+  display: block;
 }
 .dropdown-menu {
   max-height: 10rem;
   overflow-y: auto;
+  max-width: 100%;
 }
 
 .dropdown-item {
