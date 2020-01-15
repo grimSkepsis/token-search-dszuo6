@@ -1,6 +1,9 @@
 .display {
   padding: 1rem;
 }
+.display p {
+  margin-bottom: 1rem;
+}
 
 .token-search-wrapper {
   display: flex;
