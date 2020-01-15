@@ -8,9 +8,6 @@
   border-bottom: 1px solid black;
   align-items: center;
 }
-:host::ng-deep clr-input-container {
-  margin-top: 0;
-}
 input {
   margin: 0;
   border: none;
@@ -30,4 +27,12 @@ input {
 
 .dropdown-item {
   min-height: 1.5rem;
+}
+.label clr-icon {
+  cursor: pointer;
+}
+
+.label clr-icon:hover {
+  color: darkgray;
+  transition: 100ms;
 }

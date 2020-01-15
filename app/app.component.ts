@@ -25,6 +25,11 @@ export class AppComponent {
   public select(selectedVal: string): void {
     this.selectedOptions.push(selectedVal);
   }
+  public deselect(selectedVal: string): void {
+    this.selectedOptions = this.selectedOptions.filter(
+      (option: string) => option !== selectedVal
+    );
+  }
 
   public get availableOptions(): string[] {
     return this.options.filter((option: string) => this.selectedOptions.indexOf(option) === -1);
